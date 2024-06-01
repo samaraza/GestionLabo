@@ -1,5 +1,6 @@
 package com.example.GestionLabo.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,8 +24,10 @@ public class Categorie {
     private String id  ;
     private  String designation   ;
     @DBRef
+    @JsonIgnore
     private List<Rubrique> rubriques = new ArrayList<>();
     @DBRef
+    @JsonIgnore
     private List<Produit> produits = new ArrayList<>();
 
 

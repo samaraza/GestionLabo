@@ -24,8 +24,9 @@ public class Rubrique {
     private  String id  ;
     private  String  designation   ;
     @DBRef
-    @JsonIgnore
+
     private Categorie categories ;
+    @DBRef
     private List<Produit> produits = new ArrayList<>();
 
 

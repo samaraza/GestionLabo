@@ -11,6 +11,8 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Document(collection = "tp")
@@ -23,18 +25,18 @@ public class Tp {
 
     @Id
     private  String id  ;
+    private String manip  ;
     private TpType type ;
-    private LocalDateTime jourTp ;
-    @DBRef
-    private User prof ;
+    private Date jourTp ;
+
     @DBRef
     private SalleTp salleTp ;
     private NiveauScolaire niveauScolaire ;
     @DBRef
-    private List<PreparationProduit> preparationProduits ;
+    private List<PreparationProduit>preparationProduits  = new ArrayList<>() ;
     @DBRef
     private List<Preparation>preparations ;
     @DBRef
-    private List<Produit>produits ;
+    private List<Produit>produits= new ArrayList<>() ;
 
 }

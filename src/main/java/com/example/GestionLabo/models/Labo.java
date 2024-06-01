@@ -1,6 +1,7 @@
 package com.example.GestionLabo.models;
 
 import com.example.GestionLabo.models.enums.LaboType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,6 +26,7 @@ public class Labo {
     private String id   ;
     private LaboType laboType  ;
     @DBRef
+    @JsonIgnore
     private List<SalleTp> salleTp = new ArrayList<>();
 
 }

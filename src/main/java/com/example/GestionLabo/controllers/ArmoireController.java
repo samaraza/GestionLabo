@@ -19,9 +19,6 @@ public class ArmoireController {
 
     private  final ArmoireServiceImp armorieServiceImp;
 
-
-
-
     @GetMapping("")
     public ResponseEntity<List<Armoire>> getAllArmoires() {
         List<Armoire>allArms=  armorieServiceImp.getAllArmoires();

@@ -15,8 +15,6 @@ import java.util.List;
 public class LaboController {
     private  final LaboSeviceImp laboServiceImp ;
 
-
-
     @GetMapping("")
     public List<Labo> getAllLAbo() {
 
@@ -38,14 +36,6 @@ public class LaboController {
     public Labo saveLabo(   @RequestBody LaboType laboType) {
 
         return laboServiceImp.saveLabo(laboType);
-    }
-
-
-
-    @PutMapping("update/{id}")
-    public void updateLabo(@PathVariable  String id, @RequestBody LaboType laboType){
-         laboServiceImp.updateLabo(laboType);
-
     }
 
 

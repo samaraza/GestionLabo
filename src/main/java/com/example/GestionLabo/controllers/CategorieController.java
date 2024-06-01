@@ -17,7 +17,7 @@ import java.util.List;
 public class CategorieController {
     private final CategorieSeviceImp categorieServiceImp;
 
-    @GetExchange("/all")
+    @GetMapping("")
 
     public List<Categorie> getAll() {
 

@@ -30,7 +30,7 @@ public class AuthServiceImp implements AuthServiceDec {
     @Override
     public UserResponseDto registerAdmin(UserRequestDto userRequestDto) {
         User user = modelMapper.map(userRequestDto, User.class);
-        //user.setRole(Role.ADMINISTRATEUR);
+        user.setRole(Role.ADMINISTRATEUR);
         User savedUser = userRepo.save(user);
 
         return modelMapper.map(savedUser, UserResponseDto.class);
@@ -40,7 +40,7 @@ public class AuthServiceImp implements AuthServiceDec {
     public UserResponseDto login(LoginRequestDto loginRequestDto) {
         String email = loginRequestDto.getEmail();
         String suggestedPassword = loginRequestDto.getPassword();
-        Optional<User> userOptional = userRepo.findById(email);
+        Optional<User> userOptional = userRepo.findByEmail(email);
         if (userOptional.isEmpty()) {
             throw new UserWithEmailNotFoundException(email);
         } else {

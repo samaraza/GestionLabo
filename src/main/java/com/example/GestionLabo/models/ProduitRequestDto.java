@@ -1,6 +1,7 @@
 package com.example.GestionLabo.models;
 
 import com.example.GestionLabo.models.enums.ProduitType;
+import com.example.GestionLabo.models.enums.UniteMesure;
 import lombok.Data;
 
 @Data

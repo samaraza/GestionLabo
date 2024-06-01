@@ -44,7 +44,7 @@ public class RubriqueController {
         return ResponseEntity.ok("Rubrique deleted");
     }
 
-    @PostMapping("")
+    @PostMapping("/addRubrique")
 
     public ResponseEntity<Rubrique> addRubrique(@RequestBody() RubriqueRequestDto rub) {
         Rubrique response = rubriquerServiceImp.addRubrique(rub);

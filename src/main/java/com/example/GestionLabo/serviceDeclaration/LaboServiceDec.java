@@ -10,7 +10,7 @@ public interface LaboServiceDec {
     Labo getLaboAllById(String id);
     void deleteLabo(String id);
     Labo saveLabo(LaboType laboType);
-    Labo updateLabo(LaboType laboType);
+    //Labo updateLabo(LaboType laboType, String idLabo);
 
-    Labo updateLabo(String id);
+
 }

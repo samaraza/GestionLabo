@@ -43,15 +43,21 @@ public class ProduitController {
 
     @DeleteMapping("{id}")
 
-    public void deleteProduct(String id) {
+    public void deleteProduct(@PathVariable("id")  String id) {
 
         ProduitServiceImp.deleteProduct(id);
     }
 
-    /* @PutMapping("") */
+     @PutMapping("")
     public Produit modifieProuct(Produit produit) {
 
         return ProduitServiceImp.modifieProuct(produit);
+    }
+
+
+    @PutMapping("inventaire")
+    public void inventaireProduit(   @RequestBody Produit produit) {
+        ProduitServiceImp.inventaireProduit(produit);
     }
 
 }

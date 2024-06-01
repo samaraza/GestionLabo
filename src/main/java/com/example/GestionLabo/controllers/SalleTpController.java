@@ -25,10 +25,12 @@ public class SalleTpController {
 
     @GetMapping("")
     public List<SalleTp> getAllSalleTps(){
+
         return salleTpServiceImp.getAllSalleTps();
     }
     @GetMapping("/one/{id}")
     public SalleTp getSalleTpById(@PathVariable String id){
+
         return salleTpServiceImp.getSalleTpById(id);
     }
     @DeleteMapping("{id}")
@@ -36,6 +38,7 @@ public class SalleTpController {
         salleTpServiceImp.deleteSalleTp(id);
 
     }
+    @PostMapping("/addSalleTp")
     public SalleTp saveSalleTp(@RequestBody SalleTpRequestDto salleTpRequestDto) {
         return salleTpServiceImp.saveSalleTp(salleTpRequestDto);
     }

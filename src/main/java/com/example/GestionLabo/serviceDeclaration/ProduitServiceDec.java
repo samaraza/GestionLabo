@@ -15,5 +15,6 @@ public interface ProduitServiceDec {
     void deleteProduct(String id);
 
     Produit modifieProuct(Produit produit);
+    void inventaireProduit(Produit produit);
 
 }

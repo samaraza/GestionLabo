@@ -1,6 +1,7 @@
 package com.example.GestionLabo.models;
 
 import com.example.GestionLabo.models.enums.ProduitType;
+import com.example.GestionLabo.models.enums.UniteMesure;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,13 +24,16 @@ public class Produit {
     private   String reference  ;
     private ProduitType type   ;
     private int quantiteInitiale;
+    private int quantiteUtilise ;
+    private int quantiteRestante  ;
+    private int quanitePerdu ;
     @DBRef
-    @JsonIgnore
+
     private  Categorie categorie ;
     @DBRef
     @JsonIgnore
     private  Fournisseur fournisseur ;
-    private  UniteMesure uniteMesure ;
+    private UniteMesure uniteMesure;
     @DBRef
     @JsonIgnore
 

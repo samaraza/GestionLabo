@@ -43,28 +43,8 @@ public class LaboSeviceImp implements LaboServiceDec {
     public Labo saveLabo(LaboType laboType) {
         Labo labo = new Labo();
         labo.setLaboType(laboType) ;
-        this.laboRepo.save(labo);
-        Labo savedLabo=this.laboRepo.save(labo) ;
-        return  savedLabo  ;
 
-    }
-
-    @Override
-    public Labo updateLabo(LaboType laboType) {
-        return null;
-    }
-
-    @Override
-    public Labo updateLabo(String id){
-        Optional<Labo> laboOptional = this.laboRepo.findById(id ) ;
-        if (laboOptional.isPresent()){
-            Labo existingLabo = laboOptional.get();
-
-        return laboRepo.save(existingLabo);
-    } else {
-        return null;
-        }
-
+        return this.laboRepo.save(labo) ;
 
     }
 
